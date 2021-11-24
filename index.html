@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda Tattoo</title>
+    <link rel="stylesheet" href="assets/styles/dist/global.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="text-center">Pedido</h1>
+        
+    <form class="form" data-form onsubmit="pedidoController.atualiza(event)">
+        
+        <div class="form-group">
+            <label for="id">ID:</label>
+            <input class="form-id form-control" data-id disabled/>
+            <label for="cliente">Cliente: </label>
+            <input class="form-control" data-cliente autofocus required/>        
+        </div>    
+        
+        <div class="form-group">
+            <label for="local">Local no corpo: </label>
+            <input class="form-control"  data-local required />
+        </div>
+
+        <div class="form-group">
+            <label for="ideia">Ideia: </label>
+            <input class="form-control" data-ideia required />
+        </div>
+
+        <div class="form-group">
+            <label for="tamanho">Tamanho: </label>
+            <input class="form-control" data-tamanho required />
+        </div>
+
+        <div class="form-group">
+            <label for="data">Agendada para: </label>
+            <input class="form-control" data-data required />
+        </div>
+
+        <div class="form-group">
+            <label for="valor">Valor: </label>
+            <input class="form-control" data-preco required />
+        </div>
+
+        <div class="form-group">
+            <label for="status">Status: </label>
+            <input class="form-control" data-status required />
+        </div>
+        
+        <button class="btn-form" data-btn type="submit">Cadastrar</button>
+    </form>
+    </div>
+    
+    <!-- Para indicar onde será renderizada a tabela -->
+    <div data-table></div>
+    
+    <script src="assets/scripts/models/PedidoModel.js"></script>
+    <script src="assets/scripts/controllers/PedidoController.js"></script>
+    <script src="assets/scripts/models/ListaPedidosModel.js"></script>
+    <script src="assets/scripts/views/PedidosView.js"></script>
+    
+     <!-- Inicialização do PedidoController, tornando possível chama-lo no próprio HTML -->
+    <script>
+        let pedidoController = new PedidoController();
+    </script>
+</body>
+
+</html>

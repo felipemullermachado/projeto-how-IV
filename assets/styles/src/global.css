@@ -1,0 +1,157 @@
+/* Reset */
+
+body, h1, h2, h3, p, ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* Fonte */
+
+@font-face {
+  font-family: 'Prata';
+  src: url('../../fonts/Prata-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body{
+  font-family: 'Prata';
+  font-size: 10px;
+  background: #CCCCCC;
+  color: #626262;
+  font-weight: normal;
+}
+
+h1{
+  color: #6C6C6C;
+  font-size: 3.6em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Formulario */
+
+.container{
+  max-width: 708px;
+  margin: 80px auto 70px auto;
+  background: #ffffff;
+  border-radius: 40px;
+  padding: 30px 50px 35px 50px;
+  box-shadow: 25px 22px 0 #FFC2C2;
+}
+
+.form .form-group{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.form .form-group input:not(.form-id){
+  flex: content;
+}
+
+.form .form-id{
+  max-width: 67px;
+  margin-right: 35px;
+}
+
+.form label{
+  font-size: 2.4em;
+  margin-right: 15px;
+}
+
+.form .form-control{
+  font-family: 'Prata';
+  font-size: 1.8em;
+  color: #626262;
+  padding: 0 10px;
+}
+
+.form .btn-form{
+  font-size: 3.2em;
+  color: #F25454;
+  background: #FFEDED;
+  border-radius: 40px;
+  border: none;
+  padding: 25px 65px;
+  box-shadow: 2px 2px 8px #626262;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+
+.table{
+  margin: 0 auto 80px auto;
+  max-width: 1440px;
+  border-spacing: 1px;
+}
+
+.table thead{
+  background: #FFC2C2;
+}
+
+.table tr{
+  max-width: 1280px;
+  width: 100%;
+}
+
+.table th, .table td{
+  width: 160px;
+  text-align: center;
+  font-size: 1.8em;
+  height: 50px;
+
+}
+
+.table tbody tr{
+  background: #ECECEC;
+}
+
+.table tbody tr:nth-of-type(even){
+  background: #ffffff;
+}
+
+.table th:first-of-type,
+.table td:first-of-type{
+  max-width: 80px;
+}
+
+.table .btn-edit{
+  display: inline-block;
+  background: url(../../images/ico/ico-edit.png);
+  background-size: contain;
+  width: 54px;
+  height: 49px;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.table .btn-delete{
+  display: inline-block;
+  background: url(../../images/ico/ico-delete.png);
+  background-size: contain;
+  width: 43px;
+  height: 43px;
+  border: none;
+  cursor: pointer;
+}
+
+.table th:first-of-type{
+  border-radius: 40px 0 0 0;
+}
+
+.table th:last-of-type{
+  border-radius: 0 40px 0 0;
+}
